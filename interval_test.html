@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Test</title>
+
+    <!-- VexFlow Compiled Source -->
+    <script src="vexflow-free.js"></script>
+
+    <!-- Templating Source -->
+    <script src="tmpl.js"></script>
+
+    <!-- Utility functions -->
+    <script src="utility.js"></script>
+
+    <!-- Source -->
+    <script src="interval_test.js"></script>
+
+  </head>
+
+  <body onload="reset();">
+
+    <script type="text/html" id="interval_tmpl">
+      <div id="<%=id%>">
+        <canvas id="<%=canvas_id%>" width="250" height="120"></canvas>
+        <table>
+          <tr>
+            <td>
+              <form name="<%=formname_id%>">
+                <select name="<%=interval_id%>" width="120" style="width: 120px">
+                  <option value="m2">Minor 2nd</option>
+                  <option value="M2">Major 2nd</option>
+                  <option value="m3">Minor 3rd</option>
+                  <option value="M3">Major 3rd</option>
+                  <option value="P4">Perfect 4th</option>
+                  <option value="TT">Tritone</option>
+                  <option value="P5">Perfect 5th</option>
+                  <option value="m6">Minor 6th</option>
+                  <option value="M6">Major 6th</option>
+                  <option value="m7">Minor 7th</option>
+                  <option value="M7">Major 7th</option>
+                  <option value="PO">Octave</option>
+                </select>
+              </form>
+            </td>
+            <td>
+              <div id="<%=answer_id%>">
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </script>
+
+    <div id="results">
+    </div>
+
+    <table>
+      <tr>
+        <td>
+          <button onclick="check();">Check</button>
+          <button onclick="reset();">Reset</button>
+        </td>
+        <td>
+          <div id="score">
+          </div>
+        </td>
+      </tr>
+    </table>
+
+  </body>
+
+</html>

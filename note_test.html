@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Music Test</title>
+
+    <!-- VexFlow Compiled Source -->
+    <script src="vexflow-free.js"></script>
+
+    <!-- Templating Source -->
+    <script src="tmpl.js"></script>
+
+    <!-- Utility functions -->
+    <script src="utility.js"></script>
+
+    <!-- Source -->
+    <!-- <script src="keysignature_test.js"></script> -->
+    <script src="notename_test.js"></script>
+
+  </head>
+
+  <body onload="reset();">
+
+    <script type="text/html" id="notename_tmpl">
+      <div id="<%=id%>">
+        <canvas id="<%=canvas_id%>" width="200" height="120"></canvas>
+        <table>
+          <tr>
+            <td>
+              <form name="<%=formname_id%>">
+                <select name="<%=notename_id%>" width="40" style="width: 40px">
+                  <option value="a">A</option>
+                  <option value="b">B</option>
+                  <option value="c">C</option>
+                  <option value="d">D</option>
+                  <option value="e">E</option>
+                  <option value="f">F</option>
+                  <option value="g">G</option>
+                </select>
+                <select name="<%=modifier_id%>" width="80" style="width: 80px">
+                  <option value="n" selected="selected">natural</option>
+                  <option value="#">sharp</option>
+                  <option value="b">flat</option>
+                </select>
+              </form>
+            </td>
+            <td>
+              <div id="<%=answer_id%>">
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </script>
+
+    <div id="results">
+    </div>
+
+    <table>
+      <tr>
+        <td>
+          <button onclick="check();">Check</button>
+          <button onclick="reset();">Reset</button>
+        </td>
+        <td>
+          <div id="score">
+          </div>
+        </td>
+      </tr>
+    </table>
+
+  </body>
+
+</html>
